@@ -19,6 +19,6 @@
   "homepage": "https://github.com/vit0rr/eslint-meteor-error#readme",
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-plugin-meteor-error": "file:packages/eslint"
+    "eslint-plugin-meteor-error": "^1.0.0"
   }
 }
