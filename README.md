@@ -12,7 +12,7 @@ Rule to alert and fix `new Error` constructors in Meteor projects to use `new Me
 
 ## How to install
 ```sh
-meteor npm i eslint-plugin-meteor-error
+meteor npm i eslint-plugin-meteor-error -D
 ```
 
 ```javascript

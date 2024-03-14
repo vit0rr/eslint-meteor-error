@@ -5,20 +5,22 @@ const transformErrorConstructor = (context) => {
         context.report({
           node,
           message: `Use Meteor.Error instead of Error`,
-          fix: (fixer) => {
-            return fixer.replaceText(
-              node,
-              // @TODO: Improve this to handle multiple arguments
-              `new Meteor.Error(${node.arguments
-                .map((arg) => arg.raw)
-                .join(", ")})`
-            );
-          },
+          fix: (fixer) => fixer.replaceText(node.callee, `Meteor.Error`)
         });
       }
     },
+    ClassDeclaration: (node) => {
+      if (node.superClass && node.superClass.name === "Error") {
+        context.report({
+          node,
+          message: `Use Meteor.Error instead of Error`,
+          fix: (fixer) => {
+            return fixer.replaceText(node.superClass, `Meteor.Error`);
+          }
+        });
+      }
+    }
   };
 };
-
 
 module.exports = { transformErrorConstructor };
