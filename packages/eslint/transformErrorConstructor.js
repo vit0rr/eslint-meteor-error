@@ -5,7 +5,7 @@ const transformErrorConstructor = (context) => {
         context.report({
           node,
           message: `Use Meteor.Error instead of Error`,
-          fix: (fixer) => fixer.replaceText(node.callee, `Meteor.Error`)
+          fix: (fixer) => fixer.replaceText(node.callee, `Meteor.Error`),
         });
       }
     },
@@ -16,10 +16,10 @@ const transformErrorConstructor = (context) => {
           message: `Use Meteor.Error instead of Error`,
           fix: (fixer) => {
             return fixer.replaceText(node.superClass, `Meteor.Error`);
-          }
+          },
         });
       }
-    }
+    },
   };
 };
 
