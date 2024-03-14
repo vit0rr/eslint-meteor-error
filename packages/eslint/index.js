@@ -5,15 +5,14 @@ module.exports = {
     "transform-error-constructor": {
       defaultOptions: [],
       meta: {
-        type: 'problem',
+        type: "problem",
         messages: {
           defaultMessage: "Use Meteor.Error instead of Error",
         },
-        fixable: 'code',
+        fixable: "code",
         schema: [],
       },
       create: transformErrorConstructor,
     },
   },
 };
-  
