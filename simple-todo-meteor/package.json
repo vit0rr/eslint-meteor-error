@@ -1,5 +1,5 @@
 {
-  "name": "simple-todos-react",
+  "name": "simple-todo-meteor",
   "private": true,
   "scripts": {
     "start": "meteor run",
@@ -17,12 +17,10 @@
     "mainModule": {
       "client": "client/main.jsx",
       "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+    }
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-plugin-meteor-error": "file:../packages/eslint",
     "prettier": "3.2.5"
   }
 }
