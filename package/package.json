@@ -3,6 +3,10 @@
   "version": "1.1.0",
   "description": "Eslint rule for MeteorJS to use only Meteor.Error constructor",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vit0rr/eslint-meteor-error"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
