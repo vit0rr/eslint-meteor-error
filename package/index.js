@@ -1,18 +1,18 @@
-import { transformErrorConstructor } from "./transformErrorConstructor";
+const { transformErrorConstructor } = require("./transformErrorConstructor");
 
-export const rules = {
-  "transform-error-constructor": {
-    defaultOptions: [],
-    meta: {
-      type: "problem",
-      messages: {
-        defaultMessage: "Use Meteor.Error instead of Error",
+module.exports = {
+  rules: {
+    "transform-error-constructor": {
+      defaultOptions: [],
+      meta: {
+        type: "problem",
+        messages: {
+          defaultMessage: "Use Meteor.Error instead of Error",
+        },
+        fixable: "code",
+        schema: [],
       },
-      fixable: "code",
-      schema: [],
+      create: transformErrorConstructor,
     },
-    create: transformErrorConstructor,
   },
 };
-
-export default { rules };

@@ -1,6 +1,6 @@
 import { describe, it } from "vitest";
-import { RuleTester } from "eslint";
-import { rules } from "../index";
+const { RuleTester } = require("eslint");
+const { rules } = require("../index");
 
 const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2015 } });
 

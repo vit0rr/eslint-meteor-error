@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-meteor-error",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "description": "Eslint rule for MeteorJS to use only Meteor.Error constructor",
   "main": "index.js",
   "repository": {

@@ -1,4 +1,4 @@
-export const transformErrorConstructor = (context) => {
+const transformErrorConstructor = (context) => {
   return {
     NewExpression: (node) => {
       if (node.callee.name === "Error") {
@@ -20,3 +20,5 @@ export const transformErrorConstructor = (context) => {
     },
   };
 };
+
+module.exports = { transformErrorConstructor };
