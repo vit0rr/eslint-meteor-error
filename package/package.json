@@ -1,14 +1,11 @@
 {
   "name": "eslint-plugin-meteor-error",
   "version": "1.1.0",
-  "description": "",
+  "description": "Eslint rule for MeteorJS to use only Meteor.Error constructor",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "eslint": "^8.57.0"
-  },
-  "author": "",
+  "author": "@vitorsalmeida_",
   "license": "ISC"
 }

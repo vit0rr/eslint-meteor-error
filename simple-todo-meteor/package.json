@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-plugin-unused-imports": "^3.1.0",
+    "eslint-plugin-meteor-error": "file:../package",
     "prettier": "3.2.5"
   }
 }

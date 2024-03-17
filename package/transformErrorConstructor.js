@@ -1,10 +1,10 @@
-const transformErrorConstructor = (context) => {
+export const transformErrorConstructor = (context) => {
   return {
     NewExpression: (node) => {
       if (node.callee.name === "Error") {
         context.report({
           node,
-          message: `Use Meteor.Error instead of Error`,
+          message: "Use 'Meteor.Error' instead of 'Error'.",
           fix: (fixer) => fixer.replaceText(node.callee, `Meteor.Error`),
         });
       }
@@ -13,14 +13,10 @@ const transformErrorConstructor = (context) => {
       if (node.superClass && node.superClass.name === "Error") {
         context.report({
           node,
-          message: `Use Meteor.Error instead of Error`,
-          fix: (fixer) => {
-            return fixer.replaceText(node.superClass, `Meteor.Error`);
-          },
+          message: "Extend 'Meteor.Error' instead of 'Error'.",
+          fix: (fixer) => fixer.replaceText(node.superClass, `Meteor.Error`),
         });
       }
     },
   };
 };
-
-module.exports = { transformErrorConstructor };
